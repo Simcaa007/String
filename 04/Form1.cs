@@ -45,7 +45,7 @@ namespace _04
 
             int v = retezec.Length - pocet;
 
-            string vys = retezec.Take(v);
+            string vys = retezec.Substring(0, v - 1);
             return vys;
         }
 
@@ -54,6 +54,7 @@ namespace _04
             string retezec = textBox1.Text;
 
             MessageBox.Show($"{Odstran(retezec)}");
+            MessageBox.Show($"{Vem(retezec)}");
         }
     }
 }
