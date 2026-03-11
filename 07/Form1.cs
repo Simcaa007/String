@@ -21,9 +21,25 @@ namespace _07
         {
             string retezec = textBox1.Text;
             string[] slova = retezec.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string vys = "";
 
+            for (int i = 0; i < slova.Length; i++)
+            {
+                vys += slova[i] + " ";
+            }
 
-            MessageBox.Show(retezec);
+            string v = "";
+
+            foreach (char ch in vys)
+            {
+                v += ch;
+                if (ch >= 'A' && ch <= 'Z')
+                {
+                    v += "*";
+                }
+            }
+
+            MessageBox.Show(v);
         }
     }
 }
